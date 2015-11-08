@@ -7,9 +7,12 @@ from pybasicbayes.distributions import NegativeBinomial
 
 
 '''
-The code in this file provides a class for Bayesian estimation of negative
-binomial parameters through MCMC methods provided by pybasicbayes. The NB class
-sets the prior to use sensible defaults, namely
+The code in this file provides utilities for Bayesian estimation of negative
+binomial parameters through MCMC methods provided by pybasicbayes.
+
+The main function to use is get_samples(data, num_samples).
+
+The NB class sets the prior to use sensible defaults, namely
 
     p ~ Beta(alpha=1., beta=1.)
     r ~ Gamma(k=1., theta=1)
