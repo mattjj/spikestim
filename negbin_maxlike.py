@@ -7,9 +7,11 @@ from autograd import grad, multigrad
 import scipy.optimize
 
 
-# The code in this file implements a method for finding a stationary point of
-# the negative binomial likelihood via Newton's method, described here:
-# https://en.wikipedia.org/wiki/Negative_binomial_distribution#Maximum_likelihood_estimation
+'''
+The code in this file implements a method for finding a stationary point of
+the negative binomial likelihood via Newton's method, described here:
+https://en.wikipedia.org/wiki/Negative_binomial_distribution#Maximum_likelihood_estimation
+'''
 
 
 def newton(f, x0):
