@@ -34,6 +34,5 @@ samples = get_samples(data)  # samples is a list [(r1, p1), (r2, p2), ...]
 
 The implementation is in spikestim/negbin_bayes.py.
 
-Try running the files `spikestim/negbin_maxlike.py` and
-`spikestim/negbin_bayes.py` for examples, and read the code at the bottom of
-each file.
+Try reading the examples in the [examples
+directory](https://github.com/mattjj/spikestim/tree/master/examples).
