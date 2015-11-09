@@ -3,7 +3,7 @@ import numpy as np
 import numpy.random as npr
 import matplotlib.pyplot as plt
 
-from negbin_bayes import negbin_loglike, get_samples, negbin_sample
+from spikestim import negbin_loglike, negbin_sample, get_samples
 
 
 def plot_samples(data, samples):

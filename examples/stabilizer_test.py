@@ -2,8 +2,8 @@ from __future__ import division
 import numpy as np
 import matplotlib.pyplot as plt
 
-from spikestim.stabilizing_transforms import make_anscombe_stabilizer, \
-    make_laubscher_stabilizer, negbin_var
+from spikestim import make_anscombe_stabilizer, make_laubscher_stabilizer, \
+    negbin_var
 
 
 if __name__ == "__main__":

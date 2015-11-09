@@ -4,7 +4,7 @@ import autograd.numpy.random as npr
 from autograd import multigrad
 import matplotlib.pyplot as plt
 
-from spikestim.negbin_maxlike import negbin_sample, fit_maxlike, negbin_loglike
+from spikestim import negbin_sample, fit_maxlike, negbin_loglike
 
 
 def plot_results(data, r, p):
