@@ -22,12 +22,15 @@ if __name__ == "__main__":
         anscombe_vars = [negbin_var(anscombe, r, p(mu)) for mu in means]
         laubscher_vars = [negbin_var(laubscher, r, p(mu)) for mu in means]
 
+        # plot the result
         line, = plt.plot(means, anscombe_vars, label='anscombe, r={}'.format(r))
         plt.plot(means, laubscher_vars, line.get_color() + '--', label='laubscher, r={}'.format(r))
 
+    # label the plot
     plt.xlabel('E[X]')
     plt.ylabel('Var[f(X)]')
     plt.title(r'Variance of $f(X)$ as a function of $\mu = \mathbb{E}[X]$,  '
               r'$X \sim \mathrm{NB}\left(r, \; p=\frac{\mu}{mu + r}\right)$')
     plt.legend(loc='best')
+
     plt.show()
