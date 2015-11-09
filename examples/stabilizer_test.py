@@ -7,6 +7,8 @@ from spikestim import make_anscombe_stabilizer, make_laubscher_stabilizer, \
 
 
 if __name__ == "__main__":
+    plt.figure()
+
     for r in [2, 5, 10, 20]:
         # write p as a function of mu
         p = lambda mu: mu / (mu + r)
@@ -24,7 +26,8 @@ if __name__ == "__main__":
         plt.plot(means, laubscher_vars, line.get_color() + '--', label='laubscher, r={}'.format(r))
 
     plt.xlabel('E[X]')
-    plt.ylabel('Var[X]')
-    plt.title('stabilized variance as a function of mean')
+    plt.ylabel('Var[f(X)]')
+    plt.title(r'Variance of $f(X)$ as a function of $\mu = \mathbb{E}[X]$,  '
+              r'$X \sim \mathrm{NB}\left(r, \; p=\frac{\mu}{mu + r}\right)$')
     plt.legend(loc='best')
     plt.show()
