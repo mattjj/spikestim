@@ -3,7 +3,7 @@ import numpy as np
 import numpy.random as npr
 import matplotlib.pyplot as plt
 
-from spikestim import negbin_loglike, negbin_sample, get_samples
+from spikestim import negbin_loglike, negbin_sample, get_posterior_samples
 
 
 def plot_samples(data, samples):
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     data = negbin_sample(r=5, p=0.5, size=1000)
 
     # run MCMC to generate parameter samples
-    samples = get_samples(data, 100)
+    samples = get_posterior_samples(data, 100)
 
     # plot results
     every_10_samples = samples[9::10]

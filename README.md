@@ -11,6 +11,9 @@ pip install -e .
 
 ## Usage ##
 
+The main functions are `fit_maxlike`, `get_posterior_samples`, `make_anscombe_stabilizer`,
+and `make_laubscher_stabilizer`.
+
 ### Fit negative binomial parameters via maximum likelihood ###
 
 ```python
@@ -22,7 +25,8 @@ The implementation is in spikestim/negbin_maxlike.py.
 
 Maximum likelihood can have some defects; for example, there is no maximum
 likelihood estimator when `np.var(data) > np.mean(data)`. Furthermore, the
-fitting functions may run into local optima.
+fitting functions may run into local optima (and it must be initialized with
+`r_guess`).
 
 ### Sample negative binomial parameters from Bayesian posterior ###
 
@@ -30,8 +34,8 @@ Alternatively, you can do a Bayesian analysis by collecting MCMC samples from a
 posterior over the negative binomial parameters:
 
 ```python
-from spikestim import get_samples
-samples = get_samples(data)  # samples is a list [(r1, p1), (r2, p2), ...]
+from spikestim import get_posterior_samples
+samples = get_posterior_samples(data)  # samples is a list [(r1, p1), (r2, p2), ...]
 ```
 
 The implementation is in spikestim/negbin_bayes.py.

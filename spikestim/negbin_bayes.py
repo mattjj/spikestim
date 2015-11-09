@@ -8,7 +8,7 @@ from pybasicbayes.distributions import NegativeBinomial
 The code in this file provides utilities for Bayesian estimation of negative
 binomial parameters through MCMC methods provided by pybasicbayes.
 
-The main function to use is get_samples(data, num_samples).
+The main function to use is get_posterior_samples(data, num_samples).
 
 The NB class sets the prior to use sensible defaults, namely
 
@@ -26,7 +26,7 @@ class NB(NegativeBinomial):
             r=r, p=p, alpha_0=alpha, beta_0=beta, k_0=k, theta_0=theta)
 
 
-def get_samples(data, num_samples):
+def get_posterior_samples(data, num_samples):
     distn = NB()
     data = np.require(data, requirements='C')
     samples = []
