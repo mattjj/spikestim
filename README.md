@@ -4,7 +4,7 @@ This should download and install all dependencies and make the `spikestim`
 package importable from anywhere:
 
 ```
-git clone git@github.com:mattjj/spikestim.git
+git clone git@github.com:dattalab/spikestim.git
 cd spikestim
 pip install -e .
 ```
